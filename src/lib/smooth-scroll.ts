@@ -6,7 +6,7 @@ let startTime: number;
 let startY: number;
 let targetY: number;
 let distance: number;
-const duration = 800;
+const duration = 800; // Changed from let to const
 let rafId: number | null = null;
 
 const easeInOutQuad: EasingFunction = t => {

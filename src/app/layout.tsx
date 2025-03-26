@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Welcome | xAI",
-  description: "xAI is an AI company with the mission of advancing scientific discovery and gaining a deeper understanding of our universe.",
+  title: "Technical Portfolio",
+  description: "Professional portfolio showcasing software engineering and data architecture projects",
   icons: {
     icon: "/favicon.ico",
   },
