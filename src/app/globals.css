@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .content-box {
   @apply bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg;
 }

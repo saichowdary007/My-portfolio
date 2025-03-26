@@ -25,7 +25,10 @@ export default function Projects() {
       <h2 className="text-3xl md:text-4xl font-semibold mb-8 gradient-text">Key Projects</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
-          <div key={index} className="card">
+          <div 
+            key={index} 
+            className="card p-6 md:[&:not(:nth-child(2n+1))]:border-l md:[&:not(:nth-child(2n+1))]:ml-[-1px] lg:[&:not(:nth-child(3n+1))]:border-l lg:[&:not(:nth-child(3n+1))]:ml-[-1px] border-primary/20"
+          >
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-lg font-semibold">{project.title}</h3>
               <span className="text-sm text-primary/70">{project.year}</span>
