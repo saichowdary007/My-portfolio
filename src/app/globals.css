@@ -1,3 +1,16 @@
+@keyframes float {
+  0%, 100% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(-20px); opacity: 0.4; }
+}
+
+@keyframes moveHoriz {
+  0% { transform: translateX(-10px); }
+  100% { transform: translateX(10px); }
+}
+
+.particle {
+  animation: float 4s infinite ease-in-out, moveHoriz 3s infinite alternate;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

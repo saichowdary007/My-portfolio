@@ -1,6 +1,12 @@
 export default function Projects() {
   const projects = [
     {
+      title: "Personal Portfolio Website",
+      year: "2025",
+      description: "Designed and developed a responsive portfolio using Next.js and Tailwind CSS, deployed on Vercel with CI/CD pipeline",
+      tech: ["Next.js", "React", "Tailwind CSS", "Vercel"]
+    },
+    {
       title: "Sales Performance Dashboard (Power BI & SQL)",
       year: "2022",
       description: "Reduced manual reporting efforts by 50% by building interactive real-time sales tracking dashboard with automated data updates via Excel/SQL Server integration",
