@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function Hero() {
   const [showHireMe, setShowHireMe] = useState(false);
   
-  const hireMeText = "I'm a data-wrangling, SQL-savvy code-slinger who transforms chaotic datasets into scalable, cloud-crushing pipelines. With a knack for bug-busting and a spark for Spark, I optimize with humor. My Python-punning, ETL-expert self delivers insights fast, making me the witty-warehousing, hire-me-hustler your team needs for data dazzle!";
+  const hireMeText = "I'm a data-wrangling, SQL-savvy code-slinger who transforms chaotic datasets into scalable, cloud-crushing pipelines. With a knack for bug-busting and a love for optimization, I automate workflows, enhance business intelligence accuracy, and streamline ETL processing. My Python-punning, ETL-expert self builds interactive Power BI dashboards, develops predictive maintenance models, and optimizes marketing strategies through data-driven insights. The witty-warehousing, hire-me-hustler you need for data dazzle!";
 
   const handleHireMeClick = (e: React.MouseEvent) => {
     e.preventDefault();
