@@ -3,7 +3,7 @@ export default function Projects() {
     {
       title: "Personal Portfolio Website",
       year: "2025",
-      description: "Designed and developed a responsive portfolio using Next.js and Tailwind CSS, deployed on Vercel with CI/CD pipeline",
+      description: "Designed and developed a responsive portfolio website to showcase my skills, projects, and IT background. Deployed on Vercel for fast performance, highlighting my expertise in web development and digital design",
       tech: ["Next.js", "React", "Tailwind CSS", "Vercel"]
     },
     {
