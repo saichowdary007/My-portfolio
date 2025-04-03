@@ -1,22 +1,22 @@
 export default function Projects() {
   const projects = [
     {
-      title: "Cloud Data Warehouse Optimization",
+      title: "Sales Performance Dashboard (Power BI & SQL)",
       year: "2022",
-      description: "Migrated on-premise warehouse to AWS Redshift, enhancing query performance by 30% through partitioning and Terraform automation",
-      tech: ["AWS Glue", "Redshift", "Terraform"]
+      description: "Reduced manual reporting efforts by 50% by building interactive real-time sales tracking dashboard with automated data updates via Excel/SQL Server integration",
+      tech: ["Power BI", "SQL Server", "Excel"]
     },
     {
-      title: "Data Lake Implementation",
+      title: "Customer Segmentation for E-commerce",
       year: "2021",
-      description: "Architected cloud-based data lake on AWS S3/Azure Lake, reducing retrieval times by 20% with Spark optimization",
-      tech: ["AWS S3", "Azure Data Lake", "Spark"]
+      description: "Increased targeted marketing conversions by 20% using K-Means clustering to analyze customer behavior and optimize engagement strategies",
+      tech: ["Python", "Scikit-learn", "Pandas"]
     },
     {
-      title: "Automated ETL Pipeline",
+      title: "Predictive Maintenance Model",
       year: "2020",
-      description: "Developed Python/SQL ETL system processing large datasets with 95% automation using AWS Glue",
-      tech: ["Python", "SQL", "AWS Glue"]
+      description: "Saved operational costs by implementing proactive maintenance strategies using deep learning models on equipment sensor data",
+      tech: ["Python", "TensorFlow", "Keras"]
     }
   ];
 
