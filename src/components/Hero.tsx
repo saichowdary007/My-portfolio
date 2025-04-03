@@ -16,24 +16,23 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center justify-center text-center px-4">
       <div className="max-w-7xl mx-auto z-10 relative px-6 w-full">
         <h1 className="text-[4rem] font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-primary to-accent">
-          Sai Pakalapati
+          Sai Kumar Pakalapati
         </h1>
         <p className="mt-6 text-lg text-primary/70">
-          Data Engineer | Cloud Solutions Specialist
+          Data Analyst | BI & Analytics Specialist
         </p>
         
         <div className="mt-4 flex items-center justify-center gap-4 text-sm text-muted-foreground">
-          <a href="tel:+1-972-695-9445" className="hover:text-primary">+1-972-695-9445</a>
+          <a href="tel:+1-940-536-9375" className="hover:text-primary">(940) 536-9375</a>
           <span>•</span>
-          <a href="mailto:pakalapatisaikumarchowdary5@gmail.com" className="hover:text-primary">
-            pakalapatisaikumarchowdary5@gmail.com
+          <a href="mailto:saikpakalapati@gmail.com" className="hover:text-primary">
+            saikpakalapati@gmail.com
           </a>
         </div>
 
         <p className="mt-8 max-w-2xl mx-auto text-muted-foreground">
-          Data Engineer with over 8 years of experience designing and implementing robust data pipelines and warehousing solutions.
-          Expertise in cloud platforms, big data technologies, and data visualization tools. Proven ability to enhance data quality
-          and streamline workflows across complex systems.
+          Data Analyst with 2+ years of experience in Python, SQL and Power BI, specializing in data extraction, visualization, and automation.
+          Skilled in building interactive dashboards, optimizing ETL pipelines, and conducting statistical analysis to support business decision-making.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4 justify-center">

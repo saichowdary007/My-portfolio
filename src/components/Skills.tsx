@@ -4,23 +4,27 @@ export default function Skills() {
       <h2 className="text-3xl md:text-4xl font-semibold mb-8 gradient-text">Technical Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="card border border-gray-200/50 rounded-lg p-4 hover:border-primary transition-colors">
-          <h3 className="text-xl font-semibold mb-4 border-b-2 border-zinc-800 pb-2">Cloud Platforms</h3>
+          <h3 className="text-xl font-semibold mb-4 border-b-2 border-zinc-800 pb-2">Python Libraries</h3>
           <ul className="space-y-2">
             <li className="flex items-center">
-              <img src="https://skillicons.dev/icons?i=azure" alt="Azure" className="h-5 w-5 mr-2" />
-              Azure
+              <img src="https://cdn.simpleicons.org/numpy" alt="NumPy" className="h-5 w-5 mr-2" />
+              NumPy
             </li>
             <li className="flex items-center">
-              <img src="https://skillicons.dev/icons?i=aws" alt="AWS" className="h-5 w-5 mr-2" />
-              AWS
+              <img src="https://cdn.simpleicons.org/pandas" alt="Pandas" className="h-5 w-5 mr-2" />
+              Pandas
             </li>
             <li className="flex items-center">
-              <img src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="Snowflake" className="h-5 w-5 mr-2" />
-              Snowflake
+              <img src="https://cdn.simpleicons.org/tensorflow" alt="TensorFlow" className="h-5 w-5 mr-2" />
+              TensorFlow
             </li>
             <li className="flex items-center">
-              <img src="https://skillicons.dev/icons?i=gcp" alt="Google Cloud" className="h-5 w-5 mr-2" />
-              Google Cloud
+              <img src="https://cdn.simpleicons.org/scikitlearn" alt="Scikit-learn" className="h-5 w-5 mr-2" />
+              Scikit-learn
+            </li>
+            <li className="flex items-center">
+              <img src="https://cdn.simpleicons.org/matplotlib" alt="Matplotlib" className="h-5 w-5 mr-2" />
+              Matplotlib
             </li>
           </ul>
         </div>
@@ -36,43 +40,23 @@ export default function Skills() {
               <img src="https://skillicons.dev/icons?i=postgresql" alt="SQL" className="h-5 w-5 mr-2" />
               SQL
             </li>
-            <li className="flex items-center">
-              <img src="https://skillicons.dev/icons?i=r" alt="R" className="h-5 w-5 mr-2" />
-              R
-            </li>
-            <li className="flex items-center">
-              <img src="https://skillicons.dev/icons?i=scala" alt="Scala" className="h-5 w-5 mr-2" />
-              Scala
-            </li>
-            <li className="flex items-center">
-              <img src="https://cdn.simpleicons.org/c" alt="C" className="h-5 w-5 mr-2" />
-              C
-            </li>
           </ul>
         </div>
 
         <div className="card border border-gray-200/50 rounded-lg p-4 hover:border-primary transition-colors">
-          <h3 className="text-xl font-semibold mb-4 border-b-2 border-zinc-800 pb-2">Big Data</h3>
+          <h3 className="text-xl font-semibold mb-4 border-b-2 border-zinc-800 pb-2">Visualization</h3>
           <ul className="space-y-2">
             <li className="flex items-center">
-              <img src="https://cdn.simpleicons.org/apachespark/E25A1C" alt="Spark" className="h-5 w-5 mr-2" />
-              Spark
+              <img src="https://cdn.simpleicons.org/powerbi/F2C811" alt="Power BI" className="h-5 w-5 mr-2" />
+              Power BI
             </li>
             <li className="flex items-center">
-              <img src="https://cdn.simpleicons.org/apachehadoop" alt="Hadoop" className="h-5 w-5 mr-2" />
-              Hadoop
+              <img src="https://cdn.simpleicons.org/tableau/E97627" alt="Tableau" className="h-5 w-5 mr-2" />
+              Tableau
             </li>
             <li className="flex items-center">
-              <img src="https://skillicons.dev/icons?i=kafka" alt="Kafka" className="h-5 w-5 mr-2" />
-              Kafka
-            </li>
-            <li className="flex items-center">
-              <img src="https://cdn.simpleicons.org/apachehive" alt="Hive" className="h-5 w-5 mr-2" />
-              Hive
-            </li>
-            <li className="flex items-center">
-              <img src="https://cdn.simpleicons.org/apache" alt="Flume" className="h-5 w-5 mr-2" />
-              Flume
+              <img src="https://cdn.simpleicons.org/r/276DC3" alt="ggplot2" className="h-5 w-5 mr-2" />
+              ggplot2
             </li>
           </ul>
         </div>
@@ -93,30 +77,34 @@ export default function Skills() {
               Oracle
             </li>
             <li className="flex items-center">
-              <img src="https://skillicons.dev/icons?i=postgresql" alt="PostgreSQL" className="h-5 w-5 mr-2" />
-              PostgreSQL
+              <img src="https://cdn.simpleicons.org/amazonredshift/DA1F29" alt="Redshift" className="h-5 w-5 mr-2" />
+              Redshift
+            </li>
+            <li className="flex items-center">
+              <img src="https://cdn.simpleicons.org/apachecassandra/1287B1" alt="Cassandra" className="h-5 w-5 mr-2" />
+              Cassandra
             </li>
           </ul>
         </div>
 
         <div className="card border border-gray-200/50 rounded-lg p-4 hover:border-primary transition-colors">
-          <h3 className="text-xl font-semibold mb-4 border-b-2 border-zinc-800 pb-2">Tools</h3>
+          <h3 className="text-xl font-semibold mb-4 border-b-2 border-zinc-800 pb-2">Development</h3>
           <ul className="space-y-2">
             <li className="flex items-center">
-              <img src="https://skillicons.dev/icons?i=aws" alt="AWS Glue" className="h-5 w-5 mr-2" />
-              AWS Glue
+              <img src="https://skillicons.dev/icons?i=jupyter" alt="Jupyter" className="h-5 w-5 mr-2" />
+              Jupyter
             </li>
             <li className="flex items-center">
-              <img src="https://skillicons.dev/icons?i=azure" alt="Azure Data Factory" className="h-5 w-5 mr-2" />
-              Azure Data Factory
+              <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" className="h-5 w-5 mr-2" />
+              VS Code
             </li>
             <li className="flex items-center">
-              <img src="https://cdn.simpleicons.org/powerbi/F2C811" alt="Power BI" className="h-5 w-5 mr-2" />
-              Power BI
+              <img src="https://skillicons.dev/icons?i=pycharm" alt="PyCharm" className="h-5 w-5 mr-2" />
+              PyCharm
             </li>
             <li className="flex items-center">
-              <img src="https://cdn.simpleicons.org/tableau/E97627" alt="Tableau" className="h-5 w-5 mr-2" />
-              Tableau
+              <img src="https://cdn.simpleicons.org/rstudio/75AADB" alt="R Studio" className="h-5 w-5 mr-2" />
+              R Studio
             </li>
           </ul>
         </div>

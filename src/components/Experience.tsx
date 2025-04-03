@@ -1,39 +1,16 @@
 export default function Experience() {
   const experiences = [
     {
-      company: "Sirius XM",
-      role: "AWS Data Engineer",
-      duration: "Jan 2022 - Present",
-      location: "Irving, TX",
-      achievements: [
-        "Optimized data pipelines with AWS Glue, Spark, and Redshift (30% faster processing)",
-        "Managed 100M+ records daily with scalable ETL solutions",
-        "Automated workflows with CloudFormation/Terraform (40% faster deployment)",
-        "Implemented real-time analytics with Kinesis/Kafka (10M+ events/sec)"
-      ]
-    },
-    {
-      company: "T-Mobile",
-      role: "Azure Data Engineer",
-      duration: "Jan 2020 - Dec 2021",
-      location: "Atlanta, GA",
-      achievements: [
-        "Migrated to cloud-native architecture with Azure Synapse (40% faster processing)",
-        "Optimized data models for Power BI/Tableau (35% faster reporting)",
-        "Orchestrated 95% of ETL processes via Azure Data Factory",
-        "Implemented Azure Data Lake storage (50% better accessibility)"
-      ]
-    },
-    {
-      company: "CloudPolitan Technologies",
-      role: "AWS Data Engineer",
-      duration: "Jan 2016 - Dec 2019",
+      company: "SoftPoint",
+      role: "Data Analyst",
+      duration: "May 2020 - June 2022",
       location: "Hyderabad, India",
       achievements: [
-        "Developed event streaming pipelines (40% lower latency)",
-        "Automated ETL deployments with Azure DevOps (35% faster)",
-        "Optimized Spark/Hadoop processing (30% faster execution)",
-        "Enhanced query performance with Hive/S3 partitioning (40% faster)"
+        "Increased operational efficiency by 40% by automating data extraction and transformation pipelines using SQL and Python",
+        "Improved business intelligence accuracy by 30% through design of interactive Power BI dashboards for real-time monitoring",
+        "Reduced ETL processing time by 50% via query optimization and data pipeline automation",
+        "Boosted marketing ROI by 15% through A/B testing and regression analysis of customer segments",
+        "Decreased machine downtime by 25% by implementing predictive maintenance models with Python and TensorFlow"
       ]
     }
   ];
