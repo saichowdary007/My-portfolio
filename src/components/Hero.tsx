@@ -25,16 +25,16 @@ export default function Hero() {
         </p>
         
         <div className="mt-4 flex items-center justify-center gap-6 text-2xl">
-          <a href="mailto:saikpakalapati@gmail.com" className="text-primary transition-transform duration-300 transform hover:scale-125">
+          <a href="mailto:saikpakalapati@gmail.com" className="text-primary opacity-85 transition-transform duration-300 transform hover:scale-125">
             <FaEnvelope />
           </a>
-          <a href="https://github.com/saichowdary007" className="text-primary transition-transform duration-300 transform hover:scale-125">
+          <a href="https://github.com/saichowdary007" className="text-primary opacity-85 transition-transform duration-300 transform hover:scale-125">
             <FaGithub />
           </a>
-          <a href="https://leetcode.com/u/saipakalapati/" className="text-primary transition-transform duration-300 transform hover:scale-125">
+          <a href="https://leetcode.com/u/saipakalapati/" className="text-primary opacity-85 transition-transform duration-300 transform hover:scale-125">
             <SiLeetcode />
           </a>
-          <a href="tel:+1-940-536-9375" className="text-primary transition-transform duration-300 transform hover:scale-125">
+          <a href="tel:+1-940-536-9375" className="text-primary opacity-85 transition-transform duration-300 transform hover:scale-125">
             <FaPhone />
           </a>
         </div>
