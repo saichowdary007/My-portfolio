@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from 'react';
+import { FaEnvelope, FaGithub, FaPhone } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 
 export default function Hero() {
   const [showHireMe, setShowHireMe] = useState(false);
@@ -22,11 +24,18 @@ export default function Hero() {
           Data Analyst | BI & Analytics Specialist
         </p>
         
-        <div className="mt-4 flex items-center justify-center gap-4 text-sm text-muted-foreground">
-          <a href="tel:+1-940-536-9375" className="hover:text-primary">(940) 536-9375</a>
-          <span>•</span>
-          <a href="mailto:saikpakalapati@gmail.com" className="hover:text-primary">
-            saikpakalapati@gmail.com
+        <div className="mt-4 flex items-center justify-center gap-6 text-2xl">
+          <a href="mailto:saikpakalapati@gmail.com" className="text-primary transition-transform duration-300 transform hover:scale-125">
+            <FaEnvelope />
+          </a>
+          <a href="https://github.com/saichowdary007" className="text-primary transition-transform duration-300 transform hover:scale-125">
+            <FaGithub />
+          </a>
+          <a href="https://leetcode.com/u/saipakalapati/" className="text-primary transition-transform duration-300 transform hover:scale-125">
+            <SiLeetcode />
+          </a>
+          <a href="tel:+1-940-536-9375" className="text-primary transition-transform duration-300 transform hover:scale-125">
+            <FaPhone />
           </a>
         </div>
 
