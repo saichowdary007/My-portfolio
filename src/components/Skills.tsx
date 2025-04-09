@@ -54,23 +54,27 @@ export default function Skills() {
   const titleY = useTransform(scrollYProgress, [0, 1], [50, -50]);
 
   useEffect(() => {
-    if (hasAnimated) return;
-    
+    if (!sectionRef.current || hasAnimated) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
           setHasAnimated(true);
-          observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.01 }
     );
-    
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+
+    const currentRef = sectionRef.current;
+    observer.observe(currentRef);
+
+    // Check immediately
+    if (currentRef.getBoundingClientRect().top < window.innerHeight) {
+      setHasAnimated(true);
+      observer.disconnect();
     }
-    
+
     return () => observer.disconnect();
   }, [hasAnimated]);
 
@@ -98,11 +102,10 @@ export default function Skills() {
     },
   };
 
-  function SkillItem({ skill, index, scrollYProgress, itemVariants }: { 
+  function SkillItem({ skill, index, scrollYProgress }: { 
     skill: Skill; 
     index: number; 
     scrollYProgress: MotionValue<number>; 
-    itemVariants: ItemVariants; 
   }) {
     const row = Math.floor(index / 6);
     const col = index % 6;
@@ -113,8 +116,11 @@ export default function Skills() {
       <motion.div
         key={skill.alt}
         className="flex flex-col items-center"
-        variants={itemVariants}
         style={{ y: yOffset, x: xOffset }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", stiffness: 300, damping: 24, delay: index * 0.05 }}
+        viewport={{ once: true }}
       >
         <motion.div
           className="w-16 h-16 rounded-full bg-gray-800/60 flex items-center justify-center p-3 shadow-lg"
@@ -159,7 +165,6 @@ export default function Skills() {
               skill={skill} 
               index={index} 
               scrollYProgress={scrollYProgress} 
-              itemVariants={itemVariants} 
             />
           ))}
         </motion.div>

@@ -1,4 +1,10 @@
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 export default function Experience() {
+  const { scrollYProgress } = useScroll();
+  const scrollX = useTransform(scrollYProgress, [0, 1], [-50, 0]);
+
   const experiences = [
     {
       company: "SoftPoint",
@@ -16,12 +22,23 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="mb-20 px-6 w-full">
+    <motion.section
+      id="experience"
+      className="mb-20 px-6 w-full"
+      style={{ x: scrollX }}
+    >
       <div className="max-w-7xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-semibold mb-8 gradient-text">Professional Experience</h2>
       <div className="space-y-12">
         {experiences.map((exp, index) => (
-          <div key={index} className="card border border-gray-500/50 rounded-lg p-6 hover:border-primary transition-colors">
+          <motion.div
+            key={index}
+            className="card border border-gray-500/50 rounded-lg p-6 hover:border-primary transition-colors"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="flex justify-between items-start mb-4">
               <div>
                 <h3 className="text-xl font-semibold">{exp.company}</h3>
@@ -39,10 +56,10 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

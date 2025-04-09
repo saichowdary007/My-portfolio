@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaEnvelope, FaGithub, FaPhone } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Hero() {
   const [showHireMe, setShowHireMe] = useState(false);
-  
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setShowScrollIndicator(scrollTop < 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const hireMeText = "I'm a data-wrangling, SQL-savvy code-slinger who transforms chaotic datasets into scalable, cloud-crushing pipelines. With a knack for bug-busting and a love for optimization, I automate workflows, enhance business intelligence accuracy, and streamline ETL processing. My Python-punning, ETL-expert self builds interactive Power BI dashboards, develops predictive maintenance models, and optimizes marketing strategies through data-driven insights. The witty-warehousing, hire-me-hustler you need for data dazzle!";
 
   const handleHireMeClick = (e: React.MouseEvent) => {
@@ -60,6 +72,25 @@ export default function Hero() {
           </div>
         )}
       </div>
+      <AnimatePresence>
+        {showScrollIndicator && (
+          <motion.div
+            key="mouse-indicator"
+            className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
+            initial={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: [0, -10, 0] }}
+            exit={{ opacity: 0 }}
+            transition={{
+              opacity: { duration: 0.3 },
+              y: { duration: 1.5, repeat: Infinity }
+            }}
+          >
+            <div className="w-6 h-10 border-2 border-primary/70 rounded-full flex items-start justify-center p-1">
+              <div className="w-1 h-2 bg-primary/70 rounded-full" />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
