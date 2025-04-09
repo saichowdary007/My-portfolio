@@ -1,6 +1,7 @@
 'use client';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface Skill {
   alt: string;
@@ -110,48 +111,69 @@ export default function Skills() {
           viewport={{ once: true }}
         >
           {skills.map((skill, index) => {
-            // Calculate parallax effect intensity based on position in grid
             const row = Math.floor(index / 6);
             const col = index % 6;
-            const yOffset = useTransform(
-              scrollYProgress, 
-              [0, 1], 
-              [row * 8, row * -8]
-            );
-            const xOffset = useTransform(
-              scrollYProgress, 
-              [0, 1], 
-              [col * 4, col * -4]
-            );
-
+            
             return (
-              <motion.div 
-                key={skill.alt} 
-                className="flex flex-col items-center"
-                variants={itemVariants}
-                style={{ 
-                  y: yOffset,
-                  x: xOffset
-                }}
-              >
-                <motion.div 
-                  className="w-16 h-16 rounded-full bg-gray-800/60 flex items-center justify-center p-3 shadow-lg"
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <img
-                    src={skill.src}
-                    alt={skill.alt}
-                    className="w-full h-full object-contain"
-                  />
-                </motion.div>
-                <span className="text-xs text-gray-300 mt-2 text-center">
-                  {skill.alt}
-                </span>
-              </motion.div>
+              <SkillIcon
+                key={skill.alt}
+                skill={skill}
+                row={row}
+                col={col}
+                scrollYProgress={scrollYProgress}
+              />
             );
           })}
         </motion.div>
       </div>
     </section>
+  );
+};
+
+const SkillIcon = ({ skill, row, col, scrollYProgress }: {
+  skill: Skill;
+  row: number;
+  col: number;
+  scrollYProgress: MotionValue<number>;
+}) => {
+  const yOffset = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [row * 8, row * -8]
+  );
+
+  const xOffset = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [col * 4, col * -4]
+  );
+
+  return (
+    <motion.div
+      className="flex flex-col items-center"
+      variants={itemVariants}
+      style={{
+        y: yOffset,
+        x: xOffset
+      }}
+    >
+      <motion.div
+        className="w-16 h-16 rounded-full bg-gray-800/60 flex items-center justify-center p-3 shadow-lg"
+        whileTap={{ scale: 0.9 }}
+      >
+        <Image
+          src={skill.src}
+          alt={skill.alt}
+          width={64}
+          height={64}
+          className="w-full h-full object-contain"
+        />
+      </motion.div>
+      <span className="text-xs text-gray-300 mt-2 text-center">
+        {skill.alt}
+      </span>
+    </motion.div>
+  );
+};
   );
 }
