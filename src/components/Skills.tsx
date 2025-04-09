@@ -88,15 +88,35 @@ export default function Skills() {
     }
   };
 
-  const yOffsets = skills.map((_, index) => {
+  function SkillItem({ skill, index, scrollYProgress, itemVariants }: { skill: { src: string; alt: string }, index: number, scrollYProgress: any, itemVariants: any }) {
     const row = Math.floor(index / 6);
-    return useTransform(scrollYProgress, [0, 1], [row * 8, row * -8]);
-  });
-
-  const xOffsets = skills.map((_, index) => {
     const col = index % 6;
-    return useTransform(scrollYProgress, [0, 1], [col * 4, col * -4]);
-  });
+    const yOffset = useTransform(scrollYProgress, [0, 1], [row * 8, row * -8]);
+    const xOffset = useTransform(scrollYProgress, [0, 1], [col * 4, col * -4]);
+    
+    return (
+      <motion.div
+        key={skill.alt}
+        className="flex flex-col items-center"
+        variants={itemVariants}
+        style={{ y: yOffset, x: xOffset }}
+      >
+        <motion.div
+          className="w-16 h-16 rounded-full bg-gray-800/60 flex items-center justify-center p-3 shadow-lg"
+          whileTap={{ scale: 0.9 }}
+        >
+          <img
+            src={skill.src}
+            alt={skill.alt}
+            className="w-full h-full object-contain"
+          />
+        </motion.div>
+        <span className="text-xs text-gray-300 mt-2 text-center">
+          {skill.alt}
+        </span>
+      </motion.div>
+    );
+  }
 
   return (
     <section ref={sectionRef} className="relative w-full py-16 px-4 overflow-hidden">
@@ -119,35 +139,15 @@ export default function Skills() {
           animate={hasAnimated ? "visible" : "hidden"}
           viewport={{ once: true }}
         >
-          {skills.map((skill, index) => {
-            const yOffset = yOffsets[index];
-            const xOffset = xOffsets[index];
-            return (
-              <motion.div
-                key={skill.alt}
-                className="flex flex-col items-center"
-                variants={itemVariants}
-                style={{
-                  y: yOffset,
-                  x: xOffset
-                }}
-              >
-                <motion.div
-                  className="w-16 h-16 rounded-full bg-gray-800/60 flex items-center justify-center p-3 shadow-lg"
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <img
-                    src={skill.src}
-                    alt={skill.alt}
-                    className="w-full h-full object-contain"
-                  />
-                </motion.div>
-                <span className="text-xs text-gray-300 mt-2 text-center">
-                  {skill.alt}
-                </span>
-              </motion.div>
-            );
-          })}
+          {skills.map((skill, index) => (
+            <SkillItem 
+              key={skill.alt} 
+              skill={skill} 
+              index={index} 
+              scrollYProgress={scrollYProgress} 
+              itemVariants={itemVariants} 
+            />
+          ))}
         </motion.div>
       </div>
     </section>
