@@ -88,13 +88,14 @@ export default function Skills() {
     }
   };
 
-  const transforms = skills.map((_, index) => {
+  const yOffsets = skills.map((_, index) => {
     const row = Math.floor(index / 6);
+    return useTransform(scrollYProgress, [0, 1], [row * 8, row * -8]);
+  });
+
+  const xOffsets = skills.map((_, index) => {
     const col = index % 6;
-    return {
-      yOffset: useTransform(scrollYProgress, [0, 1], [row * 8, row * -8]),
-      xOffset: useTransform(scrollYProgress, [0, 1], [col * 4, col * -4])
-    };
+    return useTransform(scrollYProgress, [0, 1], [col * 4, col * -4]);
   });
 
   return (
@@ -119,7 +120,8 @@ export default function Skills() {
           viewport={{ once: true }}
         >
           {skills.map((skill, index) => {
-            const { yOffset, xOffset } = transforms[index];
+            const yOffset = yOffsets[index];
+            const xOffset = xOffsets[index];
             return (
               <motion.div
                 key={skill.alt}
