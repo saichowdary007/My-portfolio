@@ -88,6 +88,15 @@ export default function Skills() {
     }
   };
 
+  const transforms = skills.map((_, index) => {
+    const row = Math.floor(index / 6);
+    const col = index % 6;
+    return {
+      yOffset: useTransform(scrollYProgress, [0, 1], [row * 8, row * -8]),
+      xOffset: useTransform(scrollYProgress, [0, 1], [col * 4, col * -4])
+    };
+  });
+
   return (
     <section ref={sectionRef} className="relative w-full py-16 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
@@ -110,20 +119,7 @@ export default function Skills() {
           viewport={{ once: true }}
         >
           {skills.map((skill, index) => {
-            // Calculate parallax effect intensity based on position in grid
-            const row = Math.floor(index / 6);
-            const col = index % 6;
-            const yOffset = useTransform(
-              scrollYProgress,
-              [0, 1],
-              [row * 8, row * -8]
-            );
-            const xOffset = useTransform(
-              scrollYProgress,
-              [0, 1],
-              [col * 4, col * -4]
-            );
-
+            const { yOffset, xOffset } = transforms[index];
             return (
               <motion.div
                 key={skill.alt}
@@ -155,4 +151,3 @@ export default function Skills() {
     </section>
   );
 };
-
