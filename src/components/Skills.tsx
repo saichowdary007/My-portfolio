@@ -1,5 +1,5 @@
 'use client';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 
 interface Skill {
@@ -35,13 +35,11 @@ export default function Skills() {
   
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
-  // Parallax effect for the title
   const titleY = useTransform(scrollYProgress, [0, 1], [50, -50]);
-  
-  // Check if section is in viewport only once
+
   useEffect(() => {
     if (hasAnimated) return;
     
@@ -63,16 +61,15 @@ export default function Skills() {
     return () => observer.disconnect();
   }, [hasAnimated]);
 
-  // Staggered appearance for the grid items
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.04,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -83,12 +80,18 @@ export default function Skills() {
       transition: {
         type: "spring",
         stiffness: 300,
-        damping: 24
-      }
-    }
+        damping: 24,
+      },
+    },
   };
 
-  function SkillItem({ skill, index, scrollYProgress, itemVariants }: { skill: { src: string; alt: string }, index: number, scrollYProgress: any, itemVariants: any }) {
+  // Define SkillItem component with proper types
+  function SkillItem({ skill, index, scrollYProgress, itemVariants }: { 
+    skill: Skill; 
+    index: number; 
+    scrollYProgress: MotionValue<number>; 
+    itemVariants: typeof itemVariants; // Use the same type as defined above
+  }) {
     const row = Math.floor(index / 6);
     const col = index % 6;
     const yOffset = useTransform(scrollYProgress, [0, 1], [row * 8, row * -8]);
@@ -131,7 +134,6 @@ export default function Skills() {
           Technical Skills
         </motion.h2>
         
-        {/* Apple Watch App Grid Style with Motion */}
         <motion.div 
           className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 max-w-3xl mx-auto"
           variants={containerVariants}
