@@ -29,6 +29,19 @@ const skills: Skill[] = [
   { src: "https://upload.wikimedia.org/wikipedia/commons/d/d0/RStudio_logo_flat.svg", alt: "R Studio" },
 ];
 
+// Define the type for itemVariants explicitly
+interface ItemVariants {
+  [key: string]: {
+    y: number;
+    opacity: number;
+    transition?: {
+      type: string;
+      stiffness: number;
+      damping: number;
+    };
+  };
+}
+
 export default function Skills() {
   const sectionRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -72,7 +85,7 @@ export default function Skills() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: ItemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -85,12 +98,11 @@ export default function Skills() {
     },
   };
 
-  // Define SkillItem component with proper types
   function SkillItem({ skill, index, scrollYProgress, itemVariants }: { 
     skill: Skill; 
     index: number; 
     scrollYProgress: MotionValue<number>; 
-    itemVariants: typeof itemVariants; // Use the same type as defined above
+    itemVariants: ItemVariants; 
   }) {
     const row = Math.floor(index / 6);
     const col = index % 6;
