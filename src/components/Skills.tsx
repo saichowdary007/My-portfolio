@@ -70,7 +70,7 @@ export default function Skills() {
     observer.observe(currentRef);
 
     // Check immediately
-    if (currentRef.getBoundingClientRect().top < window.innerHeight) {
+    if ((currentRef as HTMLElement).getBoundingClientRect().top < window.innerHeight) {
       setHasAnimated(true);
       observer.disconnect();
     }
