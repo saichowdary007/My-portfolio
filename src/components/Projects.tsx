@@ -81,6 +81,7 @@ export default function Projects() {
             transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
           >
             <div className="flex justify-between items-start mb-4">
+              <h3 className="text-xl font-semibold">{project.title}</h3>
               <span className="text-sm text-primary/70">{project.year}</span>
             </div>
             <p className="text-muted-foreground mb-4">{project.description}</p>
