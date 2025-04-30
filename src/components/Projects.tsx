@@ -48,6 +48,12 @@ const tagVariants = {
 export default function Projects() {
   const projects = [
     {
+      title: "Personal AI Assistant",
+      year: "2025",
+      description: "Built a personal AI agent capable of handling chat, code assistance, email, and translation services. Backend deployed on Render, frontend on Vercel.",
+      tech: ["Python", "Next.js", "Vercel", "Render"]
+    },
+    {
       title: "Personal Portfolio Website",
       year: "2025",
       description: "Designed and developed a responsive portfolio website to showcase my skills, projects, and IT background. Deployed on Vercel for fast performance, highlighting my expertise in web development and digital design",
