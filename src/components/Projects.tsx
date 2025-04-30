@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Personal AI Assistant",
     year: "2025",
-    description: "Built a personal AI agent capable of handling chat, code assistance, email, and translation services. Backend deployed on Render, frontend on Vercel.",
+    description: "Developed a full-stack AI assistant website leveraging Python and Google Gemini API for intelligent task handling, including chat, code, email, and translation. The frontend, built with Next.js, is deployed on Vercel, while the backend, using Python, is hosted on Render",
     tech: ["Python", "Next.js", "Vercel", "Render"]
   },
   {
@@ -50,7 +50,7 @@ export default function Projects() {
     {
       title: "Personal AI Assistant",
       year: "2025",
-      description: "Built a personal AI agent capable of handling chat, code assistance, email, and translation services. Backend deployed on Render, frontend on Vercel.",
+      description: "Developed a full-stack AI assistant website leveraging Python and Google Gemini API for intelligent task handling, including chat, code, email, and translation. The frontend, built with Next.js, is deployed on Vercel, while the backend, using Python, is hosted on Render",
       tech: ["Python", "Next.js", "Vercel", "Render"]
     },
     {
