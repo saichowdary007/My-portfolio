@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { initializeSmoothScroll } from "../lib/smooth-scroll";
+import { GlobalBackground } from "@/components/GlobalBackground";
 
 export default function ClientBody({
   children,
@@ -20,7 +21,9 @@ export default function ClientBody({
 
   return (
     <body className="antialiased dark min-h-screen overflow-x-hidden bg-background font-sans text-primary" suppressHydrationWarning>
-      {children}
+      <GlobalBackground>
+        {children}
+      </GlobalBackground>
     </body>
   );
 }

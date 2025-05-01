@@ -28,7 +28,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center text-center px-4">
-      <div className="max-w-7xl mx-auto z-10 relative px-6 w-full">
+      <div className="max-w-7xl mx-auto relative px-6 w-full">
         <h1 className="text-[4rem] font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-primary to-accent">
           Sai Kumar Pakalapati
         </h1>
@@ -60,14 +60,14 @@ export default function Hero() {
           <a
             href="#why-hire"
             onClick={handleHireMeClick}
-            className="inline-flex items-center rounded-lg bg-background px-3 py-1 text-sm font-medium border hover:bg-accent hover:text-accent-foreground transition-colors"
+            className="inline-flex items-center rounded-lg bg-background/50 backdrop-blur-sm px-3 py-1 text-sm font-medium border border-primary/20 hover:bg-accent hover:text-accent-foreground transition-colors"
           >
             {showHireMe ? 'Hide Details' : 'Why You Should Hire Me'}
           </a>
         </div>
 
         {showHireMe && (
-          <div className="mt-6 max-w-2xl mx-auto text-muted-foreground text-left animate-fade">
+          <div className="mt-6 max-w-2xl mx-auto text-muted-foreground text-left animate-fade backdrop-blur-sm bg-background/30 p-4 rounded-lg border border-primary/10">
             <p>{hireMeText}</p>
           </div>
         )}
@@ -76,7 +76,7 @@ export default function Hero() {
         {showScrollIndicator && (
           <motion.div
             key="mouse-indicator"
-            className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
+            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10"
             initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: [0, -10, 0] }}
             exit={{ opacity: 0 }}
@@ -85,7 +85,7 @@ export default function Hero() {
               y: { duration: 1.5, repeat: Infinity }
             }}
           >
-            <div className="w-6 h-10 border-2 border-primary/70 rounded-full flex items-start justify-center p-1">
+            <div className="w-6 h-10 border-2 border-primary/70 rounded-full flex items-start justify-center p-1 backdrop-blur-sm">
               <div className="w-1 h-2 bg-primary/70 rounded-full" />
             </div>
           </motion.div>
