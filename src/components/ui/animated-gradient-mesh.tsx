@@ -11,6 +11,15 @@ interface AnimatedGradientMeshProps {
   interactive?: boolean;
 }
 
+interface Blob {
+  x: number;
+  y: number;
+  radius: number;
+  vx: number;
+  vy: number;
+  color: string;
+}
+
 export function AnimatedGradientMesh({
   className,
   colors = ["#4F46E5", "#0EA5E9", "#10B981", "#6366F1", "#8B5CF6"],
@@ -21,7 +30,7 @@ export function AnimatedGradientMesh({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mousePosition = useRef({ x: 0, y: 0 });
   const isMouseMoving = useRef(false);
-  const blobs = useRef<any[]>([]);
+  const blobs = useRef<Blob[]>([]);
   const requestRef = useRef<number>();
 
   useEffect(() => {
