@@ -1,6 +1,7 @@
 'use client';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface Skill {
   alt: string;
@@ -126,9 +127,11 @@ export default function Skills() {
           className="w-16 h-16 rounded-full bg-gray-800/60 flex items-center justify-center p-3 shadow-lg"
           whileTap={{ scale: 0.9 }}
         >
-          <img
+          <Image
             src={skill.src}
             alt={skill.alt}
+            width={64}
+            height={64}
             className="w-full h-full object-contain"
           />
         </motion.div>
