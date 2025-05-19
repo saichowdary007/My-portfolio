@@ -29,9 +29,26 @@ export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center text-center px-4">
       <div className="max-w-7xl mx-auto relative px-6 w-full">
-        <h1 className="text-[4rem] font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-primary to-accent">
-          Sai Kumar Pakalapati
-        </h1>
+        <div className="relative">
+          <h1 className="text-[4rem] font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-primary to-accent">
+            Sai Kumar Pakalapati
+          </h1>
+          
+          {/* Sparkles animation below the name */}
+          <div className="absolute -bottom-36 left-1/2 transform -translate-x-1/2 w-[40rem] h-40 overflow-hidden rounded-full">
+            {/* Gradients */}
+            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+
+            {/* Radial Gradient for soft edges */}
+            <div
+              className="absolute inset-0 w-full h-full bg-transparent pointer-events-none [mask-image:radial-gradient(ellipse 40% 70% at center, white 0%, white 60%, transparent 100%)] [-webkit-mask-image:radial-gradient(ellipse 40% 70% at center, white 0%, white 60%, transparent 100%)]"
+            ></div>
+          </div>
+        </div>
+        
         <p className="mt-6 text-lg text-primary/70">
           Data Analyst | BI & Analytics Specialist
         </p>
