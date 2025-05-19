@@ -4,6 +4,12 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    "title": "AutoPR-SummarizeCode",
+    "year": "2025",
+    "description": "Developed an AI-powered GitHub workflow and dashboard that analyzes pull-request diffs, auto-generates concise summaries, and flags code-quality issues. A Next.js UI on Vercel connects to a Python FastAPI microservice on Render, orchestrated with Docker and GitHub Actions for seamless CI/CD.",
+    "tech": ["Python", "FastAPI", "Gemini API", "Next.js", "Vercel", "Render", "GitHub Actions", "Docker"]
+  },
+  {
     title: "Personal AI Assistant",
     year: "2025",
     description: "Developed a full-stack AI assistant website leveraging Python and Google Gemini API for intelligent task handling, including chat, code, email, and translation. The frontend, built with Next.js, is deployed on Vercel, while the backend, using Python, is hosted on Render",
@@ -47,6 +53,12 @@ const tagVariants = {
 
 export default function Projects() {
   const projects = [
+    {
+      "title": "AutoPR-SummarizeCode",
+      "year": "2025",
+      "description": "Developed an AI-powered GitHub workflow and dashboard that analyzes pull-request diffs, auto-generates concise summaries, and flags code-quality issues. A Next.js UI on Vercel connects to a Python FastAPI microservice on Render, orchestrated with Docker and GitHub Actions for seamless CI/CD.",
+      "tech": ["Python", "FastAPI", "Gemini API", "Next.js", "Vercel", "Render", "Docker"]
+    },
     {
       title: "Personal AI Assistant",
       year: "2025",
