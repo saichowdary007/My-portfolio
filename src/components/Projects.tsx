@@ -4,6 +4,12 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    "title": "DocuQuery AI",
+    "year": "2025",
+    "description": "An AI-powered system for querying uploaded documents (PDF, DOCX, CSV, etc.) using natural language. It comprises a Next.js and React frontend deployed on Vercel and a Python FastAPI backend deployed on Render. The system utilizes Retrieval-Augmented Generation (RAG) with LangChain, Google's Gemini API for language modeling, and FAISS for vector storage, with Docker for containerization.",
+    "tech": ["Python", "FastAPI", "Gemini API", "LangChain", "Next.js", "React", "Docker", "Vercel", "Render"]
+  },
+  {
     "title": "AutoPR-SummarizeCode",
     "year": "2025",
     "description": "Developed an AI-powered GitHub workflow and dashboard that analyzes pull-request diffs, auto-generates concise summaries, and flags code-quality issues. A Next.js UI on Vercel connects to a Python FastAPI microservice on Render, orchestrated with Docker and GitHub Actions for seamless CI/CD.",
@@ -53,6 +59,12 @@ const tagVariants = {
 
 export default function Projects() {
   const projects = [
+    {
+      "title": "DocuQuery AI",
+      "year": "2025",
+      "description": "An AI-powered system for querying uploaded documents (PDF, DOCX, CSV, etc.) using natural language. It comprises a Next.js and React frontend deployed on Vercel and a Python FastAPI backend deployed on Render. The system utilizes Retrieval-Augmented Generation (RAG) with LangChain, Google's Gemini API for language modeling, and FAISS for vector storage, with Docker for containerization.",
+      "tech": ["Python", "FastAPI", "Gemini API", "LangChain", "Next.js", "React", "Docker", "Vercel", "Render"]
+    },
     {
       "title": "AutoPR-SummarizeCode",
       "year": "2025",
