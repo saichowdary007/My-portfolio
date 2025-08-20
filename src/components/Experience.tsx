@@ -7,16 +7,30 @@ export default function Experience() {
 
   const experiences = [
     {
-      company: "SoftPoint",
-      role: "Data Analyst",
-      duration: "May 2020 - June 2022",
-      location: "Hyderabad, India",
+      company: "Voxglobaltech",
+      role: "Gen AI Engineer",
+      duration: "Jul 2025 – Present",
+      location: "Dallas, TX",
       achievements: [
-        "Increased operational efficiency by 40% by automating data extraction and transformation pipelines using SQL and Python",
-        "Improved business intelligence accuracy by 30% through design of interactive Power BI dashboards for real-time monitoring",
-        "Reduced ETL processing time by 50% via query optimization and data pipeline automation",
-        "Boosted marketing ROI by 15% through A/B testing and regression analysis of customer segments",
-        "Decreased machine downtime by 25% by implementing predictive maintenance models with Python and TensorFlow"
+        "Built and maintained the open-source project Question Bank Generator, architecting a scalable pipeline for generating and validating 50,000+ MCQs using local LLMs via Ollama.",
+        "Developed an end-to-end ingestion and processing workflow leveraging AWS S3 for PDF intake, semantic deduplication for uniqueness, and MongoDB for structured storage.",
+        "Implemented an advanced validation pipeline using gpt-oss-20b to ensure factual accuracy, boosting correctness to >99%.",
+        "Containerized the system using Docker and deployed services with FastAPI, ensuring scalability, maintainability, and cost efficiency.",
+        "Led cross-functional efforts to integrate the question-bank system into LearnKidz Academy’s platform, supporting seamless UI consumption through a React frontend."
+      ]
+    },
+    {
+      company: "Vensolutions",
+      role: "Python Developer",
+      duration: "Jun 2024 – Jun 2025",
+      location: "Dallas, TX",
+      achievements: [
+        "Developed Python-based internal tools and microservices with limited AI integration, focusing on productivity and workflow automation.",
+        "Designed and implemented an internal Document RAG system for knowledge retrieval across company documentation, improving employee efficiency.",
+        "Built a personal AI assistant prototype using FastAPI and LangChain concepts to support internal project management and task automation.",
+        "Developed and deployed multiple FastAPI-based internal services to handle company-specific workflows and data pipelines, ensuring high performance and maintainability.",
+        "Led the creation of the open-source project DocuQuery-AI, a conversational RAG engine enabling efficient private document search and summarization.",
+        "Collaborated with cross-team stakeholders to align AI services with business objectives, improving internal document accessibility and productivity."
       ]
     }
   ];
@@ -63,3 +77,4 @@ export default function Experience() {
     </motion.section>
   );
 }
+

@@ -19,7 +19,7 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const hireMeText = "I'm a data-wrangling, SQL-savvy code-slinger who transforms chaotic datasets into scalable, cloud-crushing pipelines. With a knack for bug-busting and a love for optimization, I automate workflows, enhance business intelligence accuracy, and streamline ETL processing. My Python-punning, ETL-expert self builds interactive Power BI dashboards, develops predictive maintenance models, and optimizes marketing strategies through data-driven insights. The witty-warehousing, hire-me-hustler you need for data dazzle!";
+  const hireMeText = "AI Engineer with 1+ years building practical AI-driven applications. Strong in Python, FastAPI, LangChain, and Dockerized deployments. Hands-on with RAG pipelines, question generation systems, and real-time voice agents. I focus on scalable, maintainable, business-aligned solutions with measurable impact.";
 
   const handleHireMeClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
         
         <p className="mt-6 text-lg text-primary/70">
-          Data Analyst | BI & Analytics Specialist
+          Gen AI Engineer | Python Developer
         </p>
         
         <div className="mt-4 flex items-center justify-center gap-6 text-2xl">
@@ -69,8 +69,7 @@ export default function Hero() {
         </div>
 
         <p className="mt-8 max-w-2xl mx-auto text-muted-foreground">
-          Data Analyst with 2+ years of experience in Python, SQL and Power BI, specializing in data extraction, visualization, and automation.
-          Skilled in building interactive dashboards, optimizing ETL pipelines, and conducting statistical analysis to support business decision-making.
+          AI Engineer with 1+ years of professional experience in developing practical AI-driven applications. Skilled in Python, FastAPI, LangChain, and containerized deployments with Docker. Experience includes building RAG pipelines, question generation systems, and real-time voice assistants. Focused on delivering scalable, maintainable, and business-aligned AI solutions with measurable impact.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
@@ -111,3 +110,4 @@ export default function Hero() {
     </section>
   );
 }
+

@@ -4,46 +4,39 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    "title": "DocuQuery AI",
-    "year": "2025",
-    "description": "An AI-powered system for querying uploaded documents (PDF, DOCX, CSV, etc.) using natural language. It comprises a Next.js and React frontend deployed on Vercel and a Python FastAPI backend deployed on Render. The system utilizes Retrieval-Augmented Generation (RAG) with LangChain, Google's Gemini API for language modeling, and FAISS for vector storage, with Docker for containerization.",
-    "tech": ["Python", "FastAPI", "Gemini API", "LangChain", "Next.js", "React", "Docker", "Vercel", "Render"]
-  },
-  {
-    "title": "AutoPR-SummarizeCode",
-    "year": "2025",
-    "description": "Developed an AI-powered GitHub workflow and dashboard that analyzes pull-request diffs, auto-generates concise summaries, and flags code-quality issues. A Next.js UI on Vercel connects to a Python FastAPI microservice on Render, orchestrated with Docker and GitHub Actions for seamless CI/CD.",
-    "tech": ["Python", "FastAPI", "Gemini API", "Next.js", "Vercel", "Render", "GitHub Actions", "Docker"]
-  },
-  {
-    title: "Personal AI Assistant",
+    title: "Question Bank Generator",
     year: "2025",
-    description: "Developed a full-stack AI assistant website leveraging Python and Google Gemini API for intelligent task handling, including chat, code, email, and translation. The frontend, built with Next.js, is deployed on Vercel, while the backend, using Python, is hosted on Render",
-    tech: ["Python", "Next.js", "Vercel", "Render"]
+    description:
+      "Engineered a cost-effective, end-to-end pipeline to process PDFs from S3, generate MCQs using local LLMs (Ollama) to eliminate API costs, and serve them via a React UI. Added semantic deduplication and a validation system using gpt-oss-20b for >99% factual accuracy.",
+    tech: ["FastAPI", "Python", "Docker", "Ollama", "AWS S3", "MongoDB", "React"]
   },
   {
-    title: "Personal Portfolio Website",
+    title: "DocuQuery-AI",
     year: "2025",
-    description: "Designed and developed a responsive portfolio website to showcase my skills, projects, and IT background. Deployed on Vercel for fast performance, highlighting my expertise in web development and digital design",
-    tech: ["Next.js", "React", "Tailwind CSS", "Vercel"]
+    description:
+      "Built a full-stack conversational RAG engine for private document search and summarization. Unified ingestion with smart chunking and FAISS-based retrieval with LangChain.",
+    tech: ["FastAPI", "LangChain", "FAISS", "Next.js", "Docker"]
   },
   {
-    title: "Sales Performance Dashboard (Power BI & SQL)",
-    year: "2022",
-    description: "Reduced manual reporting efforts by 50% by building interactive real-time sales tracking dashboard with automated data updates via Excel/SQL Server integration",
-    tech: ["Power BI", "SQL Server", "Excel"]
+    title: "Real-Time Voice Agent",
+    year: "2025",
+    description:
+      "Developed a real-time voice assistant using Whisper for STT and Gemini for reasoning, achieving sub-250ms response latency with async orchestration of STT, LLM, and TTS tasks.",
+    tech: ["FastAPI", "WebSockets", "Docker", "Whisper", "Gemini"]
   },
   {
-    title: "Customer Segmentation for E-commerce",
-    year: "2021",
-    description: "Increased targeted marketing conversions by 20% using K-Means clustering to analyze customer behavior and optimize engagement strategies",
-    tech: ["Python", "Scikit-learn", "Pandas"]
+    title: "AutoPR-SummarizeCode",
+    year: "2025",
+    description:
+      "GitHub App agent that parses PR diffs, runs LLM prompts, and posts structured summaries, cutting review time by ~30%.",
+    tech: ["FastAPI", "PyGithub", "Next.js", "Docker", "GitHub Actions"]
   },
   {
-    title: "Predictive Maintenance Model",
-    year: "2020",
-    description: "Saved operational costs by implementing proactive maintenance strategies using deep learning models on equipment sensor data",
-    tech: ["Python", "TensorFlow", "Keras"]
+    title: "Personal AI Assistant Dashboard",
+    year: "2025",
+    description:
+      "Next.js + FastAPI app with modules for Chat, Summarization, Email, Code Helper, and Translation. Real-time chat/translation via WebSockets.",
+    tech: ["Next.js", "Tailwind CSS", "FastAPI", "WebSockets"]
   }
 ];
 
@@ -60,51 +53,44 @@ const tagVariants = {
 export default function Projects() {
   const projects = [
     {
-      "title": "DocuQuery AI",
-      "year": "2025",
-      "description": "An AI-powered system for querying uploaded documents (PDF, DOCX, CSV, etc.) using natural language. It comprises a Next.js and React frontend deployed on Vercel and a Python FastAPI backend deployed on Render. The system utilizes Retrieval-Augmented Generation (RAG) with LangChain, Google's Gemini API for language modeling, and FAISS for vector storage, with Docker for containerization.",
-      "tech": ["Python", "FastAPI", "Gemini API", "LangChain", "Next.js", "React", "Docker", "Vercel", "Render"]
-    },
-    {
-      "title": "AutoPR-SummarizeCode",
-      "year": "2025",
-      "description": "Developed an AI-powered GitHub workflow and dashboard that analyzes pull-request diffs, auto-generates concise summaries, and flags code-quality issues. A Next.js UI on Vercel connects to a Python FastAPI microservice on Render, orchestrated with Docker and GitHub Actions for seamless CI/CD.",
-      "tech": ["Python", "FastAPI", "Gemini API", "Next.js", "Vercel", "Render", "Docker"]
-    },
-    {
-      title: "Personal AI Assistant",
+      title: "Question Bank Generator",
       year: "2025",
-      description: "Developed a full-stack AI assistant website leveraging Python and Google Gemini API for intelligent task handling, including chat, code, email, and translation. The frontend, built with Next.js, is deployed on Vercel, while the backend, using Python, is hosted on Render",
-      tech: ["Python", "Next.js", "Vercel", "Render"]
+      description:
+        "Engineered a cost-effective, end-to-end pipeline to process PDFs from S3, generate MCQs using local LLMs (Ollama), added semantic deduplication, and validated with gpt-oss-20b to reach >99% accuracy. Multi-tenant input routing with pre-processing (OCR + page splitting) and retry-safe workers. Exposes REST endpoints for bulk uploads and a React UI for review/approval.",
+      tech: ["FastAPI", "Python", "Docker", "Ollama", "AWS S3", "MongoDB", "React"]
     },
     {
-      title: "Personal Portfolio Website",
+      title: "DocuQuery-AI",
       year: "2025",
-      description: "Designed and developed a responsive portfolio website to showcase my skills, projects, and IT background. Deployed on Vercel for fast performance, highlighting my expertise in web development and digital design",
-      tech: ["Next.js", "React", "Tailwind CSS", "Vercel"]
+      description:
+        "Conversational RAG engine for private document search and summarization with unified ingestion and FAISS-based retrieval. Implements smart chunking, metadata filters, and response grounding with source citations. Role-based access with per-namespace indices and low-latency caches.",
+      tech: ["FastAPI", "LangChain", "FAISS", "Next.js", "Docker"]
     },
     {
-      title: "Sales Performance Dashboard (Power BI & SQL)",
-      year: "2022",
-      description: "Reduced manual reporting efforts by 50% by building interactive real-time sales tracking dashboard with automated data updates via Excel/SQL Server integration",
-      tech: ["Power BI", "SQL Server", "Excel"]
+      title: "Real-Time Voice Agent",
+      year: "2025",
+      description:
+        "Real-time voice assistant using Whisper for STT and Gemini for reasoning with sub-250ms latency via async orchestration. Streaming transcription with partial results, interruption handling, and TTS fallback pathways. Connection health checks and auto-reconnect for stable sessions.",
+      tech: ["FastAPI", "WebSockets", "Docker", "Whisper", "Gemini"]
     },
     {
-      title: "Customer Segmentation for E-commerce",
-      year: "2021",
-      description: "Increased targeted marketing conversions by 20% using K-Means clustering to analyze customer behavior and optimize engagement strategies",
-      tech: ["Python", "Scikit-learn", "Pandas"]
+      title: "AutoPR-SummarizeCode",
+      year: "2025",
+      description:
+        "GitHub App agent that parses PR diffs, runs LLM prompts, and posts structured summaries to reduce reviewer time by ~30%. Adds risk level, breaking-change flags, and test-impact notes. Supports label automation and configurable prompt presets per repo.",
+      tech: ["FastAPI", "PyGithub", "Next.js", "Docker", "GitHub Actions"]
     },
     {
-      title: "Predictive Maintenance Model",
-      year: "2020",
-      description: "Saved operational costs by implementing proactive maintenance strategies using deep learning models on equipment sensor data",
-      tech: ["Python", "TensorFlow", "Keras"]
+      title: "Personal AI Assistant Dashboard",
+      year: "2025",
+      description:
+        "Web-based AI productivity assistant with modules for Chat, Summarization, Email, Code Helper, and Translation using realtime WebSockets. Modular plugin architecture, persistent threads, and exportable transcripts. Rate-limit safe queues with optimistic UI updates.",
+      tech: ["Next.js", "Tailwind CSS", "FastAPI", "WebSockets"]
     }
   ];
 
   return (
-    <section className="mb-20 overflow-hidden">
+    <section id="projects" className="mb-20 overflow-hidden">
       <h2 className="text-3xl md:text-4xl font-semibold mb-8 gradient-text">Key Projects</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {projects.map((project, index) => (
