@@ -154,17 +154,13 @@ export default function Skills() {
   }
 
   return (
-    <section ref={sectionRef} className="relative w-full py-16 px-4 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
-        <motion.h2 
-          className="text-3xl font-bold text-white mb-10 text-left"
-          style={{ y: titleY }}
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+    <section ref={sectionRef} className="mb-20 px-6 w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <h2 
+          className="text-3xl md:text-4xl font-semibold mb-8 gradient-text"
         >
           Technical Skills
-        </motion.h2>
+        </h2>
         
         <motion.div 
           className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 max-w-3xl mx-auto"
