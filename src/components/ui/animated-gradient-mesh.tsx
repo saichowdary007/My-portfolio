@@ -31,7 +31,7 @@ export function AnimatedGradientMesh({
   const mousePosition = useRef({ x: 0, y: 0 });
   const isMouseMoving = useRef(false);
   const blobs = useRef<Blob[]>([]);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;

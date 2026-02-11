@@ -32,7 +32,7 @@ export function TechParticles({
   const mousePosition = useRef({ x: 0, y: 0 });
   const isMouseInCanvas = useRef(false);
   const particles = useRef<Particle[]>([]);
-  const animationFrameId = useRef<number>();
+  const animationFrameId = useRef<number | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
