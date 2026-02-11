@@ -1,5 +1,6 @@
-use client;
-import { motion, useScroll, useTransform } from "framer-motion";
+'use client'
+import { motion } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 
 export default function Experience() {
   const { scrollYProgress } = useScroll();
