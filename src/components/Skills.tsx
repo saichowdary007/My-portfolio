@@ -1,7 +1,6 @@
 'use client';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-import Image from 'next/image';
 
 interface Skill {
   alt: string;
@@ -138,11 +137,17 @@ export default function Skills() {
           className="w-16 h-16 rounded-full bg-gray-800/60 flex items-center justify-center p-3 shadow-lg"
           whileTap={{ scale: 0.9 }}
         >
-          <Image
+          {/* Uses a plain <img> so remote SVG logos load directly from the CDN
+              in the browser, avoiding the Next.js/Vercel image-optimizer that
+              fails to proxy SVG icon CDNs (skillicons.dev, simpleicons.org). */}
+          <img
             src={skill.src}
             alt={skill.alt}
             width={64}
             height={64}
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
             className="w-full h-full object-contain"
           />
         </motion.div>
